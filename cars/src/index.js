@@ -1,10 +1,16 @@
-import { StrictMode } from "react";
+import React from "react";
+import "bulma/css/versions/bulma-no-dark-mode.css";
+import "./styles.css";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.js";
+import App from "./App";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
+const el = document.getElementById("root");
+const root = createRoot(el);
+
+root.render(
+  <Provider store={store}>
     <App />
-  </StrictMode>
+  </Provider>
 );
