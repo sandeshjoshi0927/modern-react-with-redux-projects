@@ -1,15 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { addUser, fetchUsers } from "../store";
+import { addUser, fetchUsers, deleteUser } from "../store";
 import Skeleton from "./Skeleton";
 import Button from "./Button";
 import { useThunk } from "../store/hooks/useThunk";
+import UsersListItem from "./UsersListItem";
 
 const UsersList = () => {
   const [doFetchUsers, isLoadingUsers, loadingUsersError] =
     useThunk(fetchUsers);
 
   const [doCreateUser, isCreatingUser, creatingUserError] = useThunk(addUser);
+
+  const [doDeleteUser, isDeletingUser, deletingUserError] =
+    useThunk(deleteUser);
 
   const { data } = useSelector((state) => {
     return state.users;
@@ -19,6 +23,10 @@ const UsersList = () => {
     doFetchUsers();
   }, [doFetchUsers]);
 
+  const handleAddUser = () => {
+    doCreateUser();
+  };
+
   let content;
   if (isLoadingUsers) {
     content = <Skeleton times={6} className="h-10 w-full" />;
@@ -26,19 +34,9 @@ const UsersList = () => {
     content = <p>Error fetching data.</p>;
   } else {
     content = data.map((user) => {
-      return (
-        <div key={user.id} className="mb-2 border rounded">
-          <div className="flex p-2 justify-between items-center cursor-pointer">
-            {user.name}
-          </div>
-        </div>
-      );
+      return <UsersListItem key={user.id} user={user} />;
     });
   }
-
-  const handleAddUser = () => {
-    doCreateUser();
-  };
 
   return (
     <div>
