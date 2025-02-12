@@ -2,6 +2,8 @@ import Button from "./Button";
 import { useThunk } from "../store/hooks/useThunk";
 import { deleteUser } from "../store";
 import { GoTrashcan } from "react-icons/go";
+import ExpandablePanel from "./ExpandablePanel";
+import AlbumsList from "./AlbumsList";
 
 const UsersListItem = ({ user }) => {
   const [doDeleteUser, isDeletingUser, deletingUserError] =
@@ -11,22 +13,24 @@ const UsersListItem = ({ user }) => {
     doDeleteUser(id);
   };
 
+  const header = (
+    <>
+      <Button
+        className="mr-3 hover:bg-red-500 hover:text-white"
+        loading={isDeletingUser}
+        onClick={() => handleDeleteUser(user)}
+      >
+        <GoTrashcan />
+      </Button>
+      {deletingUserError && "Error deleting user..."}
+      {user.name}
+    </>
+  );
+
   return (
-    <div className="mb-2 border rounded">
-      <div className="flex p-2 justify-between items-center cursor-pointer">
-        <div className="flex flex-row items-center justify-between">
-          <Button
-            className="mr-3 hover:bg-red-500 hover:text-white"
-            loading={isDeletingUser}
-            onClick={() => handleDeleteUser(user)}
-          >
-            <GoTrashcan />
-          </Button>
-          {deletingUserError && "Error deleting user..."}
-          {user.name}
-        </div>
-      </div>
-    </div>
+    <ExpandablePanel header={header}>
+      <AlbumsList user={user} />
+    </ExpandablePanel>
   );
 };
 
