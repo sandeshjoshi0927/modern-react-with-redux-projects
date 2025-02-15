@@ -1,26 +1,20 @@
 {
   "users": [
     {
-      "id": "12f6",
-      "name": "Forrest Hodkiewicz"
+      "id": "bc6a",
+      "name": "Mathew VonRueden"
     },
     {
-      "id": "630b",
-      "name": "Ada Considine"
-    },
-    {
-      "id": "d229",
-      "name": "Wesley Reilly"
-    },
-    {
-      "id": "56bc",
-      "name": "Keith Klein"
-    },
-    {
-      "id": "6271",
-      "name": "Keith Fay"
+      "id": "95f7",
+      "name": "Gloria Bosco"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": "tc1",
+      "title": "Album for Mathew",
+      "userId": "bc6a"
+    }
+  ],
   "photos": []
 }
