@@ -24,7 +24,7 @@ const AlbumsListItem = ({ album }) => {
     </>
   );
   return (
-    <ExpandablePanel key={album.id} header={header}>
+    <ExpandablePanel header={header}>
       <PhotosList album={album} />
     </ExpandablePanel>
   );

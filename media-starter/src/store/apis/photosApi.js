@@ -15,29 +15,42 @@ const photosApi = createApi({
   endpoints(builder) {
     return {
       removePhoto: builder.mutation({
-        query: () => {
+        invalidatesTags: (result, error, photo) => {
+          return [{ type: "Photo", id: photo.id }];
+        },
+        query: (photo) => {
           return {
-            url: "photos",
+            url: `/photos/${photo.id}`,
             method: "DELETE",
           };
         },
       }),
       addPhoto: builder.mutation({
+        invalidatesTags: (result, error, album) => {
+          return [{ type: "AlbumsPhoto", id: album.id }];
+        },
         query: (album) => {
           return {
-            url: "photos",
-            method: "POST",
+            url: "/photos",
             body: {
-              url: faker.image.imageUrl(),
               albumId: album.id,
+              url: faker.image.abstract(150, 150, true),
             },
+            method: "POST",
           };
         },
       }),
       fetchPhotos: builder.query({
+        providesTags: (result, error, album) => {
+          const tags = result.map((photo) => {
+            return { type: "Photo", id: photo.id };
+          });
+          tags.push({ type: "AlbumsPhoto", id: album.id });
+          return tags;
+        },
         query: (album) => {
           return {
-            url: "photos",
+            url: "/photos",
             params: {
               albumId: album.id,
             },

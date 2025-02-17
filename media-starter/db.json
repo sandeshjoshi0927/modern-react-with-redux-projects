@@ -1,48 +1,24 @@
 {
   "users": [
     {
-      "id": "bc6a",
-      "name": "Mathew VonRueden"
+      "id": "c98f",
+      "name": "Ms. Rudy Parker"
     },
     {
-      "id": "95f7",
-      "name": "Gloria Bosco"
-    },
-    {
-      "id": "14ee",
-      "name": "Jacqueline Collins"
+      "id": "25b8",
+      "name": "Gary Runolfsdottir"
     }
   ],
   "albums": [
     {
-      "id": "49cb",
-      "userId": "bc6a",
-      "title": "Licensed Cotton Car"
+      "id": "269a",
+      "userId": "c98f",
+      "title": "Recycled Concrete Ball"
     },
     {
-      "id": "bfb7",
-      "userId": "95f7",
-      "title": "Bespoke Soft Gloves"
-    },
-    {
-      "id": "5000",
-      "userId": "bc6a",
-      "title": "Bespoke Plastic Mouse"
-    },
-    {
-      "id": "6e0e",
-      "userId": "95f7",
-      "title": "Awesome Bronze Shoes"
-    },
-    {
-      "id": "3985",
-      "userId": "95f7",
-      "title": "Bespoke Wooden Bike"
-    },
-    {
-      "id": "0709",
-      "userId": "bc6a",
-      "title": "Luxurious Frozen Sausages"
+      "id": "1d2a",
+      "userId": "c98f",
+      "title": "Incredible Metal Mouse"
     }
   ],
   "photos": []
