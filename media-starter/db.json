@@ -7,6 +7,10 @@
     {
       "id": "95f7",
       "name": "Gloria Bosco"
+    },
+    {
+      "id": "14ee",
+      "name": "Jacqueline Collins"
     }
   ],
   "albums": [
@@ -24,6 +28,41 @@
       "id": "bfb7",
       "userId": "95f7",
       "title": "Bespoke Soft Gloves"
+    },
+    {
+      "id": "648d",
+      "userId": "bc6a",
+      "title": "Gorgeous Concrete Cheese"
+    },
+    {
+      "id": "c88c",
+      "userId": "bc6a",
+      "title": "Tasty Fresh Shirt"
+    },
+    {
+      "id": "5000",
+      "userId": "bc6a",
+      "title": "Bespoke Plastic Mouse"
+    },
+    {
+      "id": "1ef9",
+      "userId": "bc6a",
+      "title": "Handmade Rubber Bike"
+    },
+    {
+      "id": "ee06",
+      "userId": "bc6a",
+      "title": "Intelligent Metal Ball"
+    },
+    {
+      "id": "6e0e",
+      "userId": "95f7",
+      "title": "Awesome Bronze Shoes"
+    },
+    {
+      "id": "3985",
+      "userId": "95f7",
+      "title": "Bespoke Wooden Bike"
     }
   ],
   "photos": []
