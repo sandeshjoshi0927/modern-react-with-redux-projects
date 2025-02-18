@@ -1,10 +1,6 @@
 {
   "users": [
     {
-      "id": "c98f",
-      "name": "Ms. Rudy Parker"
-    },
-    {
       "id": "25b8",
       "name": "Gary Runolfsdottir"
     }
@@ -12,12 +8,12 @@
   "albums": [
     {
       "id": "269a",
-      "userId": "c98f",
+      "userId": null,
       "title": "Recycled Concrete Ball"
     },
     {
       "id": "1d2a",
-      "userId": "c98f",
+      "userId": null,
       "title": "Incredible Metal Mouse"
     }
   ],
