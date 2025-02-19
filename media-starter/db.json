@@ -1,21 +1,17 @@
 {
-  "users": [
-    {
-      "id": "25b8",
-      "name": "Gary Runolfsdottir"
-    }
-  ],
+  "users": [],
   "albums": [
     {
-      "id": "269a",
+      "id": "a9a8",
       "userId": null,
-      "title": "Recycled Concrete Ball"
-    },
-    {
-      "id": "1d2a",
-      "userId": null,
-      "title": "Incredible Metal Mouse"
+      "title": "Oriental Soft Chair"
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "id": "6172",
+      "albumId": null,
+      "url": "https://loremflickr.com/150/150/abstract?lock=25290"
+    }
+  ]
 }
