@@ -1,17 +1,11 @@
 {
-  "users": [],
+  "users": [
+    
+  ],
   "albums": [
-    {
-      "id": "a9a8",
-      "userId": null,
-      "title": "Oriental Soft Chair"
-    }
+    
   ],
   "photos": [
-    {
-      "id": "6172",
-      "albumId": null,
-      "url": "https://loremflickr.com/150/150/abstract?lock=25290"
-    }
+    
   ]
 }
